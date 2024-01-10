@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My PortFolio</title>
+    <link rel="stylesheet" href="My_portfolio.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&family=Whisper&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/0bd474f70d.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="./Assets/logo.png" alt="" class="logo" />
+          <!-- <img src="./Assets/logo (2).png" alt="" class="logo2"> -->
+          <!-- <h3 class="logo">KHIRODA</h3> -->
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contant</a></li>
+            <li><a href="#">Cv</a></li>
+            <i class="fa-solid fa-xmark"></i>
+          </ul>
+          <i class="fa-solid fa-bars"></i>
+        </nav>
+        <div class="hader-text">
+          <p>Fullstack Devloper</p>
+          <h1>Hi, I'm <span>KHIRODA</span><br />From India</h1>
+        </div>
+      </div>
+    </div>
+    <!-- About -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="./Assets/guduprot1.jpg.png" alt="" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="subtitel">About Me</h1>
+            <p class="">
+              I'm a dedicated website developer passionate about crafting
+              functional and visually appealing online experiences through
+              creative coding and design.
+            </p>
+            <div class="tab-titels">
+              <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+              <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+              <p class="tab-links" onclick="opentab('Education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="Skills">
+              <ul>
+                <li><span>UI/UX</span><br> Desisging Web/App interfaces</li>
+                <br>
+                <li><span>Web Devlopment</span><br> Desisging Web/App interfaces</li>
+              </br>
+              </ul>
+            </div>
+            <div class="tab-contents" id="Experience">
+              <ul>
+                <li><span>2024-current</span><br> Completed virtual intership in intern galaxy</li>
+                <br>
+                <li><span>2023</span><br>Knowledge and making small samll project</li>
+              </br>
+              </ul>
+            </div>
+            <div class="tab-contents" id="Education">
+              <ul>
+                <li><span>2019-2023</span><br>B.tech form Hi-tech insitude Of technology at bhubenswar,odisha</li>
+                <br>
+                <li><span>2017</span><br>10th form Govt.HighScool at ganjam,odisha</li>
+              </br>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---------- Contant ------------->
+    <div id="contant">
+      <div class="container">
+        <div class="row">
+          <div class="contant-left">
+            <h1 class="sub-titel">Contant Me</h1>
+            <p><i class="fa-solid fa-envelope"></i>goudakhirodakumar@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i>+917326937662</p>
+            <div class="social-icons">
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://twitter.com/Khiroda_Gouda"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="https://www.instagram.com/khiroda8/"><i class="fa-brands fa-square-instagram"></i></a>
+              <a href="www.linkedin.com/in/khiroda-kumar-gouda-330998262"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <a href="" class="btn">Download Cv</a>
+          </div>
+          <div class="contant-right">
+            <form>
+              <input type="text" name="Name" placeholder="Your Name" required>
+              <input type="email" name="email" placeholder="Your Email" required>
+              <textarea name="Message" placeholder="Your Message" cols="30" rows="6"></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>Copyright &copy KHIRODA</p>
+      </div>
+    </div>
+
+    <!-- javaScript code -->
+    <script>
+        let tabLinks = document.querySelectorAll('.tab-links');
+        let tabContents = document.querySelectorAll('.tab-contents');
+
+        // Function to switch tabs
+        function opentab(tabName) {
+            // Remove 'active-link' class from all tab links
+            tabLinks.forEach(link => {
+                link.classList.remove('active-link');
+            });
+
+            // Remove 'active-tab' class from all tab contents
+            tabContents.forEach(content => {
+                content.classList.remove('active-tab');
+            });
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabName).classList.add('active-tab');
+        }
+    </script>
+  </body>
+</html>
